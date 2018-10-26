@@ -2,6 +2,7 @@ import { Cropper } from 'react-cropper'
 import React, { Component } from 'react';
 import '../../bootstrap.css';
 import './cropper.css'
+import ChapterCreator from './PublisherForm/ChapterCreator.js'
 
 
 class PublisherForm extends Component {
@@ -9,32 +10,30 @@ class PublisherForm extends Component {
         super(props)
 
         this.state = {
-            chapterCount: 3
+            chapterCount: 3,
+            chapters: []
         }
     }
 
     addChapter() {
         this.setState({
-            chapterCount: this.state.chapterCount + 1
+            chapterCount: this.state.chapterCount + 1,
+            chapters: this.state.chapters.push(<ChapterCreator />)
         })
     }
 
     removeChapter() {
         this.setState({
-            chapterCount: this.state.chapterCount - 1
+            chapterCount: this.state.chapterCount - 1,
+            chapters: this.state.chapters.pop(<ChapterCreator />)
         })}
 
     render() {
-
-        var chapters = []
-        
-        for(let i = 0; i < this.state.chapterCount; i++) {
-            chapters.push(<h1> Hello </h1>)
-        }
-
+       var chapters = this.state.chapters
         return (
             
-                <Cropper src='http://fengyuanchen.github.io/cropper/img/picture.jpg' />
+            { chapters }
+
             <button onclick="addChapter()"> 
                 Add Chapter
                 </button>
