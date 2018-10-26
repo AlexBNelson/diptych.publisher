@@ -12,7 +12,10 @@ class ImageSelector extends Component {
         return (
 
             <input type="file"> Choose Image</input>
-            <Cropper src = 'http://fengyuanchen.github.io/cropper/img/picture.jpg' />
+            <Cropper src='http://fengyuanchen.github.io/cropper/img/picture.jpg' />
+            <h3>Text: </h3>
+            <textarea rows="4" cols="50">
+            </textarea>
         );
     }
 }
