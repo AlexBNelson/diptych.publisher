@@ -10,7 +10,7 @@ class PublisherForm extends Component {
 
         this.state = {
             chapterCount: 3,
-            chapters: []
+            chapters: [<ChapterCreator />, <ChapterCreator />, <ChapterCreator />]
         }
     }
 
@@ -24,15 +24,15 @@ class PublisherForm extends Component {
                 {chapters}
                 <button onClick=
                     {() => this.setState({
-                chapterCount: this.state.chapterCount + 1,
-                chapters: this.state.chapters.push(<ChapterCreator />)
+                    chapterCount: this.state.chapterCount + 1,
+                    chapters: this.state.chapters.concat(<ChapterCreator />)
             }) } > 
                 Add Chapter
                 </button >
                 <button onClick=
                     {() => this.setState({
-                        chapterCount: this.state.chapterCount - 1,
-                        chapters: this.state.chapters.pop(<ChapterCreator />)
+                    chapterCount: this.state.chapterCount - 1,
+                    chapters: this.state.chapters.concat(<ChapterCreator />)
                     })}>
                 Remove Chapter
                 </button>

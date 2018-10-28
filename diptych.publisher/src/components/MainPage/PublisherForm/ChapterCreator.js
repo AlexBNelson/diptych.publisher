@@ -9,6 +9,7 @@ import '../../../bootstrap.css';
                         this.handleSubmit = this.handleSubmit.bind(this);
                         this.fileInput = React.createRef();
                     }
+
                     handleSubmit(event) {
                         event.preventDefault();
                         alert(
