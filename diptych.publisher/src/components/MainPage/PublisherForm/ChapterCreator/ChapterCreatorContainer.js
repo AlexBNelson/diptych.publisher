@@ -1,15 +1,10 @@
 import { connect } from 'react-redux'
-import BackgroundPane from './BackgroundPane';
+import ChapterCreator from './ChapterCreator'
 
 
 const getImageUrls = (value) => {
     return value;
 }
-
-const removeImageUrl = (value) => {
-    return value;
-}
-
 
 
 const mapStateToProps = state => ({
