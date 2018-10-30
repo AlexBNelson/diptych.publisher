@@ -3,7 +3,7 @@ export const addImageUrl = filter => ({
     filter
 })
 
-export const removeImageUrl = filter => ({
-    type: 'REMOVE_IMAGE_URL',
-    filter
+export const removeChapter = index => ({
+    type: 'REMOVE_CHAPTER',
+    index
 })

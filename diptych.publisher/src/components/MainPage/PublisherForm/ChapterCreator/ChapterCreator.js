@@ -9,12 +9,9 @@ import { connect } from 'react-redux'
                     constructor(props) {
                         super(props);
                         this.handleSubmit = this.handleSubmit.bind(this);
-                        this.handleRemove = this.handleRemove.bind(this);
                         this.fileInput = React.createRef();
                     }
-
-                    componentDidMount() {
-                    }
+                    
 
                     handleSubmit(event) {
                         event.preventDefault();
@@ -25,12 +22,6 @@ import { connect } from 'react-redux'
                         );
                     }
 
-                    handleRemove(event) {
-                        event.preventDefault();
-
-                        const { dispatch } = this.props;
-                        dispatch(removeImageUrl(this.props.id))
-                    }
 
                     render() {
                         return (
@@ -46,9 +37,6 @@ import { connect } from 'react-redux'
                                 <textarea rows="4" cols="50">
                                 </textarea>
                             </form>
-                            <form onSubmit={this.handleRemove}>
-                                <button type="submit">Remove Chapter</button>
-                                </form>
                                 </div>
                         );
                     }

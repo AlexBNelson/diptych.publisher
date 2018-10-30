@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import GuidePane from './components/MainPage/GuidePane.js'
-import PublisherForm from './components/MainPage/PublisherForm.js'
+import PublisherForm from './components/MainPage/PublisherForm/PublisherForm.js'
 
 class Home extends Component {
     render() {
