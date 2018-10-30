@@ -12,15 +12,21 @@ class PublisherForm extends Component{
         
         this.state = {
             chapterCount: 0,
-            chapters: []
+            chapters: [],
+            urls: [],
+            text: []
         }
     }
 
     handleClick(index) {
         console.log(this.state.chapters.length)
 
+        console.log(index)
+
         var chapterCount = this.state.chapterCount - 1
-        var chapters = this.state.chapters.splice(index, 1)
+        var chapters = this.state.chapters
+
+        chapters.splice(index, 1)
 
         console.log(chapters.length)
 
